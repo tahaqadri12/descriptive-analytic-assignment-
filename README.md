@@ -1,74 +1,142 @@
-IBM Cognos Analytics – RetailPulse Sales & Customer Insights
+### Simplified README – Swiggy Restaurant Analytics Project
 
-Project Overview
+### 1\. Project Overview
 
-This project contains six practical assignments completed using IBM Cognos Analytics with the RetailPulse Sales package and RetailPulse Customers data module. The project focuses on report creation, data grouping, filtering, crosstab analysis, interactive prompts, and customer dashboard visualization.
+This project analyzes Swiggy restaurant data from 9 Indian cities. It studies restaurant prices, ratings, popular food types, and delivery times.
 
-Practicals Completed
+It also uses predictive analytics to estimate delivery risks and identify cities with growth opportunities.
 
-Practical 1: Generate a First RetailPulse Report
+### 2\. Objectives
 
-- Created a basic list report using the RetailPulse Sales package.
-- Added Region, Product Category, and Sales Amount.
-- Ran and saved the report as RetailPulse – First Sales Report.
+* Find which cities have the most restaurants.
 
-Practical 2: Build a Grouped Sales List Report
+* Compare restaurant prices.
 
-- Created a sales report with Region, Store Name, Product Category, Quantity, and Sales Amount.
-- Grouped data by Region and Store Name.
-- Applied currency formatting and numeric alignment.
-- Added sales totals and a page header.
+* Analyze customer ratings.
 
-Practical 3: Filter Sales by Region and Date
+* Identify popular cuisines.
 
-- Applied a Region filter to display North-region data.
-- Added a date-range filter for the reporting quarter.
-- Combined conditions using AND.
-- Converted the Region filter into a prompt for interactive report filtering.
+* Compare delivery times across cities.
 
-Practical 4: Build a Region × Product Crosstab
+* Study the relationship between price, rating, and delivery time.
 
-- Created a crosstab report to analyze sales by Region and Product Category.
-- Added Sales Amount and Quantity as measures.
-- Included row and column summary totals.
-- Applied currency formatting to Sales Amount.
+* Predict delivery risks and potential high-rated restaurants.
 
-Practical 5: Build a Sales Prompt Report
+### 3\. Dataset
 
-- Added a prompt page with Region and date-range prompts.
-- Created a cascading Store prompt linked to Region.
-- Connected prompts to report filters.
-- Tested interactive filtering using different regions and reporting periods.
+* Total restaurants: 8,680
 
-Practical 6: Build a Customer Insights Dashboard
+* Cities: 9
 
-- Created a dashboard using the RetailPulse Customers data module.
-- Added a summary card for active customers.
-- Created a line chart for new versus returning customers.
-- Added a bar chart for customer loyalty segments.
-- Configured a Region filter to cross-filter dashboard widgets.
+* Total fields: 10
 
-Tools & Technologies
+* Missing values: None
 
-- IBM Cognos Analytics
-- RetailPulse Sales Package
-- RetailPulse Customers Data Module
-- List Reports
-- Crosstab Reports
-- Report Filters and Prompts
-- Data Visualization and Dashboards
+The dataset includes restaurant name, area, city, price for two people, average rating, total ratings, food type, address, and delivery time.
 
-Key Learning Outcomes
+Cities include Bangalore, Hyderabad, Mumbai, Pune, Kolkata, Delhi, Chennai, Ahmedabad, and Surat.
 
-- Creating and formatting business reports.
-- Grouping and aggregating sales data.
-- Applying simple and advanced filters.
-- Building crosstab reports with multiple measures.
-- Designing interactive prompt pages.
-- Creating dashboards with charts, summary cards, and shared filters.
+### 4\. Tools Used
 
-Project Status
+* Python: Main programming language
 
-Completed: Six practical assignments covering reporting, filtering, crosstab analysis, prompt-based reporting, and customer insights dashboards.
+* Pandas: Data analysis
 
-Note: Live data results depend on access to the RetailPulse data sources and a working IBM Cognos Analytics environment.# descriptive-analytic-assignment-
+* Scikit-learn: Predictive models
+
+* Matplotlib: Charts and graphs
+
+* ReportLab: PDF report creation
+
+### 5\. Key Findings
+
+| Analysis              | Result                          |
+| --------------------- | ------------------------------- |
+| Most restaurants      | Kolkata – 1,346                 |
+| Average price for two | ₹348.44                         |
+| Average rating        | 3.66/5                          |
+| Most popular cuisine  | Chinese                         |
+| Average delivery time | 53.97 minutes                   |
+| Fastest delivery      | Ahmedabad – 44.71 minutes       |
+| Slowest delivery      | Kolkata – 67.81 minutes         |
+| Most crowded area     | Rohini, Delhi – 257 restaurants |
+
+### Price Analysis
+
+The average price for two people is ₹348.44. Most restaurants belong to the mid-price category of ₹250–₹499.
+
+Mumbai is the most expensive city, while Surat is the most affordable.
+
+### Rating Analysis
+
+The average restaurant rating is 3.66 out of 5. Chennai has the highest average rating, while Delhi has the lowest.
+
+Some restaurants have the same 2.9 rating and exactly 80 reviews, which may indicate default ratings rather than genuine customer feedback.
+
+### Cuisine Analysis
+
+Chinese is the most commonly listed cuisine, followed by North Indian and Indian food.
+
+### Delivery Analysis
+
+Ahmedabad has the fastest average delivery time, while Kolkata has the slowest.
+
+### Price and Rating Relationship
+
+Higher prices do not necessarily mean better ratings or faster delivery.
+
+### 6\. Business Insights
+
+* Swiggy can add more restaurants in cities such as Surat and Delhi.
+
+* Kolkata needs improvements in delivery services.
+
+* Premium restaurants may need more promotional support.
+
+* Chennai and Bangalore can be studied to improve service quality.
+
+* Restaurant recommendations should consider quality, not just price.
+
+* Unusual rating patterns should be checked.
+
+### 7\. Predictive Analytics
+
+The project uses machine learning to:
+
+* Delivery Prediction: Identify restaurants whose delivery may be slower than their city's average.
+
+* Rating Prediction: Identify restaurants likely to receive ratings of 4.5 or above.
+
+* City Growth: Identify cities with opportunities for expansion.
+
+* Price Analysis: Study how much price affects restaurant ratings.
+
+The models reported 58.4% accuracy for delivery-risk prediction and 71.7% recall for high-rating prediction.
+
+### 8\. Project Folder Structure
+
+```text
+Swiggy-Analytics/
+│
+├── README.md
+├── dataset/
+│   └── swiggy_restaurant_listings.csv
+├── python/
+│   ├── analysis.py
+│   ├── predictive.py
+│   └── make_charts.py
+├── report/
+│   └── report.pdf
+└── charts/
+    └── graphs.png
+```
+
+### 9\. Data Disclaimer
+
+The dataset represents restaurant listings collected at one point in time. It does not show live Swiggy data or changes over time.
+
+### 10\. Conclusion
+
+This project uses descriptive and predictive analytics to understand restaurant prices, ratings, popular cuisines, and delivery performance. It also helps identify possible improvements in delivery services and opportunities for business growth.
+
+Important: These findings are taken from your uploaded README. The simplified version explains them in easier language but does not independently verify the dataset or model results.
