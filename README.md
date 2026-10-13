@@ -139,4 +139,3 @@ The dataset represents restaurant listings collected at one point in time. It do
 
 This project uses descriptive and predictive analytics to understand restaurant prices, ratings, popular cuisines, and delivery performance. It also helps identify possible improvements in delivery services and opportunities for business growth.
 
-Important: These findings are taken from your uploaded README. The simplified version explains them in easier language but does not independently verify the dataset or model results.
